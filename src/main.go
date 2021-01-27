@@ -12,7 +12,7 @@ import (
 func main() {
     var files []string
 
-    root := "/home/zack-cp/projects/nasa_pics/pictures"
+    root := "/home/zack-dt/pics"
 
     err := filepath.Walk(root, func(path string, info os.FileInfo, err error) error {
         files = append(files, path)
