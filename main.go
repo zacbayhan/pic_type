@@ -5,6 +5,7 @@ import (
     "os"
     "net/http"
     "path/filepath"
+    "github.com/zacbayhan/pic_type"
 		//"reflect"
 )
 
