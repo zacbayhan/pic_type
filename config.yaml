@@ -1,3 +1,9 @@
 # This file is justed to store metadata on the photos contained within a directory
 indexFile: "index.json"
+# Local Directory that photos are stored in
 pictureDir: "/data/Pictures/2024/02/25"
+#
+# Scrapper Configuration info
+#
+scrapper:
+  baseURL: "https://apod.nasa.gov/apod"
