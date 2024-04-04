@@ -1,16 +1,32 @@
+// General Collection of functions and utilities that will support other pacakges
 package utils
 
 import (
 	"log"
 	"net/http"
 	"os"
+
+	"gopkg.in/yaml.v3"
 )
 
 // ApplicationConfig in the main configuration structure for program run time
 type ApplicationConfiguration struct {
 	ConfigFile string
 	PictureDir string
+	IndexFile  string `yaml:"indexFile"`
 	FileList   []string
+}
+
+func (c *ApplicationConfiguration) ReadConfig(fileID string) *ApplicationConfiguration {
+	yamlFile, err := os.ReadFile(fileID)
+	if err != nil {
+		log.Fatal("Err in os.ReadFile")
+	}
+	err = yaml.Unmarshal(yamlFile, c)
+	if err != nil {
+		log.Fatal("Failure to Unmarshal")
+	}
+	return c
 }
 
 // Determines the mime content-type
