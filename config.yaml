@@ -2,6 +2,8 @@
 indexFile: "index.json"
 # Local Directory that photos are stored in
 pictureDir: "/data/Pictures/2024/02/25"
+# Debug, option enabled additional output to console
+debug: false
 #
 # Scrapper Configuration info
 #

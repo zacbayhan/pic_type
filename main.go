@@ -2,12 +2,7 @@ package main
 
 import (
 	"log"
-	"os"
-
-	//"reflect"
 	"space-memes/utils"
-
-	"github.com/davecgh/go-spew/spew"
 )
 
 func main() {
@@ -16,17 +11,28 @@ func main() {
 		ConfigFile: "config.yaml",
 	}
 
-	a.ReadConfig(a.ConfigFile)
+	a.ConfigureApplication(a.ConfigFile)
 
-	spew.Dump(a)
+	metaFile := a.GetMetaFile()
 
-	a.BuildFileList()
+	log.Println(metaFile)
 
-	for idx, file := range a.FileList {
+	/*
+		// eventaully want to switch this to log level based output
+		if a.Debug {
+			spew.Dump(a)
+		}
 
-		f, _ := os.Open(file)
-		contentType, _ := utils.GetFileContentType(f)
+		a.BuildFileList()
 
-		log.Printf("Photo[%v]:\t %v\t FileType: %v\n", idx, a.FileList[idx], contentType)
-	}
+		for idx, file := range a.FileList {
+
+			f, _ := os.Open(file)
+			contentType, _ := utils.GetFileContentType(f)
+
+			log.Printf("Photo[%v]:\t %v\t FileType: %v\n",
+				idx, a.FileList[idx],
+				contentType)
+		}
+	*/
 }
