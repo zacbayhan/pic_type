@@ -12,8 +12,10 @@ func main() {
 
 	a := &utils.ApplicationConfiguration{
 		ConfigFile: "config.yaml",
-		PictureDir: "/data/Pictures/2024/02/25",
 	}
+	a.ReadConfig(a.ConfigFile)
+
+	log.Println(a)
 
 	a.BuildFileList()
 

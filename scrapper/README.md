@@ -5,3 +5,6 @@ This is where the process starts, can't have any sweet space memes if you don't 
 <img src="/docs/scraper.jpg"
      style="border:4px solid #1b6b6f; padding:15px;"
      width="25%"/>
+
+**__Libraries__**
+* [Colly](https://github.com/gocolly/colly)

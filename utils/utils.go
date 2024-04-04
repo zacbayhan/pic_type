@@ -12,7 +12,7 @@ import (
 // ApplicationConfig in the main configuration structure for program run time
 type ApplicationConfiguration struct {
 	ConfigFile string
-	PictureDir string
+	PictureDir string `yaml:"pictureDir"`
 	IndexFile  string `yaml:"indexFile"`
 	FileList   []string
 }

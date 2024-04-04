@@ -1,2 +1,3 @@
 # This file is justed to store metadata on the photos contained within a directory
 indexFile: "index.json"
+pictureDir: "/data/Pictures/2024/02/25"
