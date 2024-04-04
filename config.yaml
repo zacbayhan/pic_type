@@ -7,3 +7,4 @@ pictureDir: "/data/Pictures/2024/02/25"
 #
 scrapper:
   baseURL: "https://apod.nasa.gov/apod"
+  indexSlug: "archivepix.html"

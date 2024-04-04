@@ -6,6 +6,8 @@ import (
 
 	//"reflect"
 	"space-memes/utils"
+
+	"github.com/davecgh/go-spew/spew"
 )
 
 func main() {
@@ -13,9 +15,10 @@ func main() {
 	a := &utils.ApplicationConfiguration{
 		ConfigFile: "config.yaml",
 	}
+
 	a.ReadConfig(a.ConfigFile)
 
-	log.Println(a)
+	spew.Dump(a)
 
 	a.BuildFileList()
 

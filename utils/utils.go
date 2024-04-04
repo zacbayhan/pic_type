@@ -15,6 +15,10 @@ type ApplicationConfiguration struct {
 	PictureDir string `yaml:"pictureDir"`
 	IndexFile  string `yaml:"indexFile"`
 	FileList   []string
+	Scrapper   struct {
+		BaseURL   string `yaml:"baseURL"`
+		IndexSlug string `yaml:"indexSlug"`
+	}
 }
 
 func (c *ApplicationConfiguration) ReadConfig(fileID string) *ApplicationConfiguration {
