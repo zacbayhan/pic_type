@@ -6,12 +6,14 @@ import (
 	"os"
 )
 
+// ApplicationConfig in the main configuration structure for program run time
 type ApplicationConfiguration struct {
 	ConfigFile string
 	PictureDir string
 	FileList   []string
 }
 
+// Determines the mime content-type
 func GetFileContentType(out *os.File) (string, error) {
 
 	// Only the first 512 bytes are used to sniff the content type.
@@ -30,6 +32,7 @@ func GetFileContentType(out *os.File) (string, error) {
 	return contentType, nil
 }
 
+// Creates list of files within directory
 func (a *ApplicationConfiguration) BuildFileList() {
 	f, err := os.Open(a.PictureDir)
 	if err != nil {
